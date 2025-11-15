@@ -3,26 +3,26 @@ from selenium import webdriver
 driver = webdriver.Chrome()
 driver.get("https://demoqa.com/text-box")
 
-Input_Full_Name = driver.find_element("xpath", "//input[@id='userName']")
-Input_Full_Name.clear()
-assert Input_Full_Name.get_attribute("value") == ""
-Input_Full_Name.send_keys("Ivan")
-assert "Ivan" in Input_Full_Name.get_attribute("value")
+input_full_name = driver.find_element("xpath", "//input[@id='userName']")
+input_full_name.clear()
+assert input_full_name.get_attribute("value") == ""
+input_full_name.send_keys("Ivan")
+assert "Ivan" in input_full_name.get_attribute("value")
 
-Input_Email = driver.find_element("xpath", "//input[@id='userEmail']")
-Input_Email.clear()
-assert Input_Email.get_attribute("value") == ""
-Input_Email.send_keys("test@mail.com")
-assert "test@mail.com" in Input_Email.get_attribute("value")
+input_email = driver.find_element("xpath", "//input[@id='userEmail']")
+input_email.clear()
+assert input_email.get_attribute("value") == ""
+input_email.send_keys("test@mail.com")
+assert "test@mail.com" in input_email.get_attribute("value")
 
-Textarea_Current_Address = driver.find_element("xpath", "//textarea[@id='currentAddress']")
-Textarea_Current_Address.clear()
-assert Textarea_Current_Address.get_attribute("value") == ""
-Textarea_Current_Address.send_keys("г. Москва, ул. Победы, д. 10, кв. 5")
-assert "г. Москва, ул. Победы, д. 10, кв. 5" in Textarea_Current_Address.get_attribute("value")
+textarea_current_address = driver.find_element("xpath", "//textarea[@id='currentAddress']")
+textarea_current_address.clear()
+assert textarea_current_address.get_attribute("value") == ""
+textarea_current_address.send_keys("г. Москва, ул. Победы, д. 10, кв. 5")
+assert "г. Москва, ул. Победы, д. 10, кв. 5" in textarea_current_address.get_attribute("value")
 
-Textarea_Permanent_Address = driver.find_element("xpath", "//textarea[@id='permanentAddress']")
-Textarea_Permanent_Address.clear()
-assert Textarea_Permanent_Address.get_attribute("value") == ""
-Textarea_Permanent_Address.send_keys("г. Москва, ул. Победы, д. 10, кв. 5")
-assert "г. Москва, ул. Победы, д. 10, кв. 5" in Textarea_Permanent_Address.get_attribute("value")
+textarea_permanent_address = driver.find_element("xpath", "//textarea[@id='permanentAddress']")
+textarea_permanent_address.clear()
+assert textarea_permanent_address.get_attribute("value") == ""
+textarea_permanent_address.send_keys("г. Москва, ул. Победы, д. 10, кв. 5")
+assert "г. Москва, ул. Победы, д. 10, кв. 5" in textarea_permanent_address.get_attribute("value")
